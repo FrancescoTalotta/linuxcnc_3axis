@@ -1,0 +1,70 @@
+<pyvcp>
+  <vbox>
+   <relief>RIDGE</relief>
+   <bd>4</bd>
+    <label>
+     <text>"Spindle Speed:"</text>
+     <font>("Helvetica",9)</font>
+    </label>
+    <bar>
+     <halpin>"spindle-speed"</halpin>
+     <max_>24000</max_>
+    </bar>
+  </vbox>
+ <button>
+     <halpin>"rapid-to-home"</halpin>
+     <text>"Home XYZ"</text> 
+     <font>('Fixed',8)</font>
+ </button>
+
+ <button>
+     <halpin>"rapid-to-home-xy"</halpin>
+     <text>"Home XY"</text> 
+     <font>('Fixed',8)</font>
+ </button>
+
+ <button>
+     <halpin>"go-away-xyz"</halpin>
+     <text>"Free Area XYZ"</text> 
+     <font>('Fixed',8)</font>
+ </button>
+
+ <button>
+     <halpin>"recenter"</halpin>
+     <text>"Recenter XY"</text> 
+     <font>('Fixed',8)</font>
+ </button>
+
+ <button>
+     <halpin>"find-center"</halpin>
+     <text>"Find Center"</text> 
+     <font>('Fixed',8)</font>
+ </button>
+
+ <button>
+     <halpin>"center-here"</halpin>
+     <text>"G54 Center XY"</text> 
+     <font>('Fixed',8)</font>
+ </button>
+
+ <button>
+     <halpin>"center-here-xyz"</halpin>
+     <text>"G54 Center XYZ"</text> 
+     <font>('Fixed',8)</font>
+ </button>
+
+ <hbox>
+        <relief>RIDGE</relief>
+        <bd>2</bd>
+        <label>
+            <text>"Probe"</text>
+            <font>('Helvetica',9)</font>
+        </label>
+        <led>
+            <halpin>"probe"</halpin>
+            <size>20</size>
+            <on_color>"green"</on_color>
+            <off_color>"red"</off_color>
+        </led>
+ </hbox>
+</pyvcp>

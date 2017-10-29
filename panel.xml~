@@ -1,0 +1,28 @@
+<pyvcp>
+ <button>
+     <halpin>"rapid-to-home"</halpin>
+     <text>"Home XYZ"</text> 
+     <font>('Fixed',8)</font>
+ </button>
+
+ <button>
+     <halpin>"rapid-to-home-xy"</halpin>
+     <text>"Home XY"</text> 
+     <font>('Fixed',8)</font>
+ </button>
+
+ <hbox>
+        <relief>RIDGE</relief>
+        <bd>2</bd>
+        <label>
+            <text>"Probe"</text>
+            <font>('Helvetica',9)</font>
+        </label>
+        <led>
+            <halpin>"probe"</halpin>
+            <size>20</size>
+            <on_color>"green"</on_color>
+            <off_color>"red"</off_color>
+        </led>
+ </hbox>
+</pyvcp>
