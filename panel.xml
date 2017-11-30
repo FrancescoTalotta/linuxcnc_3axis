@@ -14,57 +14,71 @@
  <button>
      <halpin>"rapid-to-home"</halpin>
      <text>"Home XYZ"</text> 
-     <font>('Fixed',8)</font>
+     <font>('Fixed',9)</font>
  </button>
 
  <button>
      <halpin>"rapid-to-home-xy"</halpin>
      <text>"Home XY"</text> 
-     <font>('Fixed',8)</font>
+     <font>('Fixed',9)</font>
  </button>
 
  <button>
      <halpin>"go-away-xyz"</halpin>
      <text>"Free Area XYZ"</text> 
-     <font>('Fixed',8)</font>
+     <font>('Fixed',9)</font>
  </button>
 
  <button>
      <halpin>"recenter"</halpin>
      <text>"Recenter XY"</text> 
-     <font>('Fixed',8)</font>
+     <font>('Fixed',9)</font>
  </button>
 
  <button>
      <halpin>"find-center"</halpin>
      <text>"Find Center"</text> 
-     <font>('Fixed',8)</font>
+     <font>('Fixed',9)</font>
  </button>
 
  <button>
      <halpin>"center-here"</halpin>
      <text>"G54 Center XY"</text> 
-     <font>('Fixed',8)</font>
+     <font>('Fixed',9)</font>
  </button>
 
  <button>
      <halpin>"center-here-xyz"</halpin>
      <text>"G54 Center XYZ"</text> 
-     <font>('Fixed',8)</font>
+     <font>('Fixed',9)</font>
  </button>
 
  <hbox>
-        <relief>RIDGE</relief>
-        <bd>2</bd>
-        <label>
-            <text>"Probe"</text>
-            <font>('Helvetica',9)</font>
-        </label>
-        <led>
-            <halpin>"probe"</halpin>
-            <size>20</size>
-            <on_color>"green"</on_color>
-            <off_color>"red"</off_color>
-        </led>
+     <relief>GROOVE</relief>
+     <bd>2</bd>
+     <label>
+         <text>"PROBE"</text>
+         <font>('Helvetica',13)</font>
+     </label>
+     <led>
+        <halpin>"probe"</halpin>
+        <size>23</size>
+        <on_color>"green"</on_color>
+        <off_color>"red"</off_color>
+      </led>
  </hbox>
+
+ <hbox>
+   <relief>GROOVE</relief>
+   <bd>4</bd>
+   <label>
+     <text>"Water Temp:"</text>
+     <font>("Helvetica",10)</font>
+   </label>
+   <number> 
+     <halpin>"temperature"</halpin>
+     <font>("Helvetica",12)</font>
+     <format>"3.1f"</format>
+   </number>
+  </hbox>
 </pyvcp>

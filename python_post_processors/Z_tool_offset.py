@@ -46,7 +46,7 @@ def main():
            print("  (MSG,Remove Z Probe)")
            print("  M0")
            print("O100 endsub")
-           print("(MSG, Set the machine to the tool probe position. If already set click Continue. If not set press ESC and set the machine to the desireded tool probe position.)")
+           print("(MSG, Set the machine to the tool probe position. If already set click press S to resume. If not set press ESC and set the machine to the desireded tool probe position, then run the program again.)")
            print("M0")
            print("G28.1")
         else:

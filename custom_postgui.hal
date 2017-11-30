@@ -16,4 +16,8 @@
 # set up spindle speed control
  net spindle-cmd-rpm-abs    => pyvcp.spindle-speed
 # net spindle-at-speed => pyvcp.spindle-at-speed-led
- sets spindle-at-speed true
+sets spindle-at-speed true
+
+# Temperature
+
+ net water_temp arduino.temperature => pyvcp.temperature 
