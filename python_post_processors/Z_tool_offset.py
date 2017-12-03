@@ -29,9 +29,18 @@ def main():
     infile = sys.argv[1]
     f = open(infile, "r")
     for line in f:
+        match = re.match("T(\d\d)(.*)M(\d.*)", line)
+        if match:
+            tool = int(match.group(1))
+            print("M101 P%d" % tool)
+            print("T%d M6" % tool)
+            print("O100 call [%d]" % tool)
+        else:
+           print(line.replace("\r", "").replace("\n", ""))
+
         match = re.match("(.*)G21(.*)", line)
         if match:
-           print("G21")
+           #print("G21")
            print("O100 sub")
            print("  G49")
            print("  G54")
@@ -49,13 +58,6 @@ def main():
            print("(MSG, Set the machine to the tool probe position. If already set click press S to resume. If not set press ESC and set the machine to the desireded tool probe position, then run the program again.)")
            print("M0")
            print("G28.1")
-        else:
-           print(line.replace("\r", "").replace("\n", ""))
-
-        match = re.match("T(\d\d)(.*)M(\d.*)", line)
-        if match:
-            tool = int(match.group(1))
-            print("O100 call [%d]" % tool)
 
         match = re.match("S(\d*)(.*)M3", line)
         if (match and is_on):
