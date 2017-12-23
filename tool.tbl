@@ -12,7 +12,7 @@ T11 P11 D2.000000 ;Drill 2.0 mm
 T12 P12 D0.800000 ;End Mill Flat 0.8 mm
 T13 P13 D1.000000 Z-0.877199 ;End Mill Flat 625 Plexy 1.0 mm
 T14 P14 D2.000000 ;End Mill Flat 625 Plexy 2.0 mm
-T15 P15 D2.000000 Z-15.114947 ;Flat Wood 2.0 mm
+T15 P15 D2.000000 Z-28.841773 ;Flat Wood 2.0 mm
 T16 P16 D6.000000 Z-6.057558 ;Flat Wood 6.0 mm
 T17 P17 D2.000000 Z-0.742732 ;One Flute Flat 2.0 mm
 T18 P18 D2.000000 ;HSS End Mill Flat 2.0 mm
@@ -27,7 +27,7 @@ T26 P26 D0.300000 ;End Mill 10° 0.5 mm
 T27 P27 D0.300000 Z-5.112914 ;End Mill 10° 0.5 mm
 T28 P28 D6.000000 Z-13.734622 ;Flat Wood 6.0 mm
 T29 P29 D3.000000 Z-4.951359 ;One Flute Flat 3.0 mm
-T30 P30 D2.000000 Z-8.475441 ;One Flute Flat 2.0 mm New
+T30 P30 D2.000000 Z-8.112124 ;One Flute Flat 2.0 mm New
 T31 P31 D0.700000 ;End Mill Flat 625 Plexy 1.0 mm
 T32 P32 D0.100000 Z-6.897396 ;End Mill 15° 0.1mm Prismatic
 T33 P33 D8.000000 ;Round-Carve Wood 8.0mm
