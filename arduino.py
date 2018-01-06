@@ -5,17 +5,17 @@ import sys
 import time
 
 PORT = "/dev/ttyACM0"
-ser = serial.Serial(PORT, 115200, timeout=15)
+ser = serial.Serial(PORT, 115200, timeout=0)
 
 #Now we create the HAL component and its pins
 ## HAL_IN  arduino can read from linuxCNC
 ## HAL_OUT arduino can write to linuxCNC
-
+#
 c = hal.component("arduino")
 c.newpin("spindle_rev",hal.HAL_BIT,hal.HAL_IN)
 c.newpin("vacuum_pump",hal.HAL_BIT,hal.HAL_IN)
 c.newpin("servo_tool",hal.HAL_BIT,hal.HAL_IN)
-c.newpin("temperature",hal.HAL_FLOAT,hal.HAL_OUT)
+#c.newpin("temperature",hal.HAL_FLOAT,hal.HAL_OUT)
 
 time.sleep(1)
 c.ready()
@@ -28,7 +28,7 @@ servo_tool =c['servo_tool']
 spindle_rev_old='False'
 vacuum_pump_old='False'
 servo_tool_old='False'
-temperature_old=0
+#temperature_old=0
 
 try:
   while 1:
@@ -58,9 +58,9 @@ try:
        elif servo_tool==True:
           ser.write("U")
 # Temperature
-    while ser.inWaiting():
-       temp = ser.read(5)
-       c['temperature']=float(temp)
+    #while ser.inWaiting():
+       #temp = ser.read(5)
+       #c['temperature']=float(temp)
 
 except KeyboardInterrupt:
     raise SystemExit 

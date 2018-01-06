@@ -20,4 +20,4 @@ sets spindle-at-speed true
 
 # Temperature
 
- net water_temp arduino.temperature => pyvcp.temperature 
+ #net water_temp arduino.temperature => pyvcp.temperature 

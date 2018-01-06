@@ -44,7 +44,7 @@ def main():
            print("O100 sub")
            print("  G49")
            print("  G54")
-           print("  #<probe_height> = 19.25")
+           print("  #<probe_height> = 19.32")
            print("  G0 Z30")
            print("  (MSG,Insert Z Probe)")
            print("  M0")
