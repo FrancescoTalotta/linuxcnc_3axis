@@ -13,13 +13,13 @@
   </vbox>
  <button>
      <halpin>"rapid-to-home"</halpin>
-     <text>"Home XYZ"</text> 
+     <text>"GO Home XYZ"</text> 
      <font>('Fixed',9)</font>
  </button>
 
  <button>
      <halpin>"rapid-to-home-xy"</halpin>
-     <text>"Home XY"</text> 
+     <text>"GO Home XY"</text> 
      <font>('Fixed',9)</font>
  </button>
 
@@ -43,13 +43,13 @@
 
  <button>
      <halpin>"center-here"</halpin>
-     <text>"G54 Center XY"</text> 
+     <text>"SET G54 Center XY"</text> 
      <font>('Fixed',9)</font>
  </button>
 
  <button>
      <halpin>"center-here-xyz"</halpin>
-     <text>"G54 Center XYZ"</text> 
+     <text>"SET G54 Center XYZ"</text> 
      <font>('Fixed',9)</font>
  </button>
 

@@ -58,7 +58,7 @@ net xstep <= stepgen.0.step
 net xdir <= stepgen.0.dir
 net xenable axis.0.amp-enable-out => stepgen.0.enable
 # X axis limit
-net both-x => axis.0.pos-lim-sw-in  axis.0.neg-lim-sw-in axis.0.home-sw-in 
+net both-x => axis.0.pos-lim-sw-in axis.0.neg-lim-sw-in axis.0.home-sw-in 
 
 #Y AXIS
 setp stepgen.1.position-scale [AXIS_1]SCALE
@@ -94,9 +94,9 @@ net estop-out <= iocontrol.0.user-enable-out
 net estop-ext => iocontrol.0.emc-enable-in
 
 loadusr -W hal_manualtoolchange
-net tool-change iocontrol.0.tool-change => hal_manualtoolchange.change
-net tool-changed iocontrol.0.tool-changed <= hal_manualtoolchange.changed
-net tool-number iocontrol.0.tool-prep-number => hal_manualtoolchange.number
+net tool-change iocontrol.0.tool-change            => hal_manualtoolchange.change
+net tool-changed iocontrol.0.tool-changed          <= hal_manualtoolchange.changed
+net tool-number iocontrol.0.tool-prep-number       => hal_manualtoolchange.number
 net tool-prepare-loopback iocontrol.0.tool-prepare => iocontrol.0.tool-prepared
 
 # Spindle Speed Control and ON/OFF
