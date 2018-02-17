@@ -18,6 +18,12 @@ addf motion-command-handler servo-thread
 addf motion-controller servo-thread
 addf stepgen.update-freq servo-thread
 
+#Debouncing component (for limit switches)
+loadrt debounce cfg=3
+addf debounce.0 servo-thread
+setp debounce.0.delay 10
+
+
 # Enable Pin
 net xenable         => parport.0.pin-14-out
 #X Axis Pins
@@ -38,10 +44,15 @@ setp parport.0.pin-02-out-reset 1
 setp parport.0.pin-03-out-invert 1
 net zdir => parport.0.pin-03-out
 
-#Limit switches, EStop, Probe
-net both-x                        <= parport.0.pin-13-in
-net both-y                        <= parport.0.pin-12-in
-net max-z                         <= parport.0.pin-15-in
+#Limit switches with debouncing
+net debounce-x debounce.0.0.in <= parport.0.pin-13-in
+net debounce-y debounce.0.1.in <= parport.0.pin-12-in
+net debounce-z debounce.0.2.in <= parport.0.pin-15-in
+net both-x                     <= debounce.0.0.out
+net both-y                     <= debounce.0.1.out
+net max-z                      <= debounce.0.2.out
+
+#E-Stop, Probe
 net estop-ext                     <= parport.0.pin-10-in-not
 net probe parport.0.pin-11-in-not => motion.probe-input
 

@@ -52,12 +52,13 @@ def main():
            print("  G10 L10 P#1 Z[#<probe_height>]")
            print("  G0 Z40")
            print("  G43")
-           print("  (MSG,Remove Z Probe, then press S, Hai acceso il mandrino?!)")
+           print("  (MSG,Remove Z Probe, then press S)")
            print("  M0")
            print("O100 endsub")
            print("(MSG, Set the machine to the tool probe position. If already set click press S to resume. If not set press ESC and set the machine to the desireded tool probe position, then run the program again.)")
            print("M0")
            print("G28.1")
+           print("M102")
 
         match = re.match("S(\d*)(.*)M3", line)
         if (match and is_on):
