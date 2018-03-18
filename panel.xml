@@ -11,47 +11,55 @@
      <max_>24000</max_>
     </bar>
   </vbox>
+
+ <button>
+     <halpin>"center-here-xyz"</halpin>
+     <text>"SET G54 Center XYZ"</text>
+     <font>('Fixed',10)</font>
+     <bg>"#7fdbb1"</bg>
+     <fg>"#000000"</fg>
+ </button>
+
  <button>
      <halpin>"rapid-to-home"</halpin>
-     <text>"GO Home XYZ"</text> 
+     <text>"GO Home XYZ"</text>
      <font>('Fixed',9)</font>
+     <bg>"#ffc1c8"</bg>
+     <fg>"#000000"</fg>
  </button>
 
  <button>
      <halpin>"rapid-to-home-xy"</halpin>
-     <text>"GO Home XY"</text> 
+     <text>"GO Home XY"</text>
      <font>('Fixed',9)</font>
+     <bg>"#ffc1c8"</bg>
+     <fg>"#000000"</fg>
  </button>
 
  <button>
      <halpin>"go-away-xyz"</halpin>
-     <text>"Free Area XYZ"</text> 
+     <text>"Free Area XYZ"</text>
      <font>('Fixed',9)</font>
+     <bg>"#ffc1c8"</bg>
+     <fg>"#000000"</fg>
  </button>
 
  <button>
      <halpin>"recenter"</halpin>
-     <text>"Recenter XY"</text> 
+     <text>"Recenter XY"</text>
      <font>('Fixed',9)</font>
+     <bg>"#c8ebf7"</bg>
+     <fg>"#000000"</fg>
  </button>
 
  <button>
      <halpin>"find-center"</halpin>
-     <text>"Find Center"</text> 
+     <text>"Find Center"</text>
      <font>('Fixed',9)</font>
+     <bg>"#c8ebf7"</bg>
+     <fg>"#000000"</fg>
  </button>
 
- <button>
-     <halpin>"center-here"</halpin>
-     <text>"SET G54 Center XY"</text> 
-     <font>('Fixed',9)</font>
- </button>
-
- <button>
-     <halpin>"center-here-xyz"</halpin>
-     <text>"SET G54 Center XYZ"</text> 
-     <font>('Fixed',9)</font>
- </button>
 
  <hbox>
      <relief>GROOVE</relief>
