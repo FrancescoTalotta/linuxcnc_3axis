@@ -66,7 +66,7 @@ try:
     if probe_3d!=probe_3d_old:
        probe_3d_old=probe_3d
        if probe_3d==False:
-          ser.write("L")
+          ser.write("M")
        elif probe_3d==True:
           ser.write("I")
 # Temperature
