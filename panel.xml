@@ -60,6 +60,13 @@
      <fg>"#000000"</fg>
  </button>
 
+ <button>
+     <halpin>"find-rectangle-center"</halpin>
+     <text>"Find Rectangle Center"</text>
+     <font>('Fixed',9)</font>
+     <bg>"#c8ebf7"</bg>
+     <fg>"#000000"</fg>
+ </button>
 
  <hbox>
      <relief>GROOVE</relief>
@@ -74,6 +81,13 @@
         <on_color>"green"</on_color>
         <off_color>"red"</off_color>
       </led>
+
+      <checkbutton>
+         <halpin>"probe_3d"</halpin>
+         <text>"Probe 3D"</text>
+         <font>("Helvetica",10)</font>
+      </checkbutton>
+
  </hbox>
 
  <hbox>

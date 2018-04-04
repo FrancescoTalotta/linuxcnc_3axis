@@ -7,6 +7,7 @@
  net remote-go-away-xyz       halui.mdi-command-02    <= pyvcp.go-away-xyz
  net remote-recenter          halui.mdi-command-03    <= pyvcp.recenter
  net remote-find-center       halui.mdi-command-04    <= pyvcp.find-center
+ net remote-rect-center       halui.mdi-command-05    <= pyvcp.find-rectangle-center
  #net center-here              halui.mdi-command-05    <= pyvcp.center-here
  net center-here-xyz          halui.mdi-command-06    <= pyvcp.center-here-xyz
  net probe                    parport.0.pin-11-in-not <= pyvcp.probe
@@ -14,6 +15,10 @@
 # set up spindle speed control
  net spindle-cmd-rpm-abs    => pyvcp.spindle-speed
  sets spindle-at-speed true
+
+# 3D probe
+ net 3D_probe arduino.probe_3d <= pyvcp.probe_3d
+
 
 # Temperature
  #net water_temp arduino.temperature => pyvcp.temperature 
