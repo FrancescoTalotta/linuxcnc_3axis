@@ -1,0 +1,8 @@
+(Set the G54 Center and reload the g-code file)
+
+O <g54_center_xyz> sub
+ G10 L20 P1 X0 Y0 Z0
+ M110
+O <g54_center_xyz> endsub
+
+M2

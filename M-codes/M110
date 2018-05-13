@@ -1,0 +1,8 @@
+#!/bin/bash
+
+sleep 3
+halcmd setp axisui.reload True
+sleep 4
+halcmd setp axisui.reload False
+
+exit 0

@@ -29,7 +29,7 @@ def main():
     infile = sys.argv[1]
     f = open(infile, "r")
     for line in f:
-        match = re.match("T(\d\d)(.*)M(\d.*)", line)
+        match = re.match("T(\d{1,2})(.*)M(\d.*)", line)
         if match:
             tool = int(match.group(1))
             print("M101 P%d" % tool)
@@ -48,7 +48,7 @@ def main():
            print("  G0 Z40")
            print("  (MSG,Insert Z Probe, then press S)")
            print("  M0")
-           print("  G38.2 Z-30 F140")
+           print("  G38.2 Z-15 F140")
            print("  G10 L10 P#1 Z[#<probe_height>]")
            print("  G0 Z40")
            print("  G43")
