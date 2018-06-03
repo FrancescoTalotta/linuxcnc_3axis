@@ -1,0 +1,15 @@
+O <set_z> 
+  G21
+  G49
+  G54
+  #<probe_height> = 19.32
+  G0 Z40
+  M108
+  G38.2 Z-15 F140
+  G10 L10 P#1 Z[#<probe_height>]
+  G0 Z40
+  G43
+  M109
+O <set_z> endsub
+
+M2

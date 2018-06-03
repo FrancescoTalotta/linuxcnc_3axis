@@ -45,6 +45,14 @@
  </button>
 
  <button>
+     <halpin>"set_z"</halpin>
+     <text>"SET Z con Probe"</text>
+     <font>('Fixed',10)</font>
+     <bg>"#ff75b5"</bg>
+     <fg>"#000000"</fg>
+ </button>
+
+ <button>
      <halpin>"recenter"</halpin>
      <text>"Recenter XY"</text>
      <font>('Fixed',9)</font>

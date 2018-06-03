@@ -26,6 +26,7 @@ def main():
     feedrate  = 0
     feedrate2 = 0
     is_on     = True
+    set_z     = False
     infile = sys.argv[1]
     f = open(infile, "r")
     for line in f:
@@ -34,7 +35,17 @@ def main():
             tool = int(match.group(1))
             print("M101 P%d" % tool)
             print("T%d M6" % tool)
-            print("O100 call [%d]" % tool)
+            if set_z:
+                print("O100 call [%d]" % tool)
+            else:
+                with open('/home/ciccio/linuxcnc/configs/3040t_no-endstops/routines/set_z.ngc', 'r') as z_tool_routine:
+                     line_vector = z_tool_routine.readlines()
+                line_vector[8] = str("  G10 L10 P%d Z[#<probe_height>]\n" % tool)
+                with open('/home/ciccio/linuxcnc/configs/3040t_no-endstops/routines/set_z.ngc', 'w') as z_tool_routine:
+                     z_tool_routine.writelines(line_vector)
+                z_tool_routine.close()
+
+            set_z=True
         else:
            print(line.replace("\r", "").replace("\n", ""))
 
@@ -46,13 +57,13 @@ def main():
            print("  G54")
            print("  #<probe_height> = 19.32")
            print("  G0 Z40")
-           print("  (MSG,Insert Z Probe, then press S)")
+           print("  (MSG,Inserisci Z Probe, e poi premi S)")
            print("  M0")
            print("  G38.2 Z-15 F140")
            print("  G10 L10 P#1 Z[#<probe_height>]")
            print("  G0 Z40")
            print("  G43")
-           print("  (MSG,Remove Z Probe, then press S)")
+           print("  (MSG,Rimuovi Z Probe, e poi premi S)")
            print("  M0")
            print("O100 endsub")
            print("(MSG, Set the machine to the tool probe position. If already set click press S to resume. If not set press ESC and set the machine to the desireded tool probe position, then run the program again.)")

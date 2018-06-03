@@ -8,8 +8,8 @@
  net remote-recenter          halui.mdi-command-03    <= pyvcp.recenter
  net remote-find-center       halui.mdi-command-04    <= pyvcp.find-center
  net remote-rect-center       halui.mdi-command-05    <= pyvcp.find-rectangle-center
- #net center-here              halui.mdi-command-05    <= pyvcp.center-here
  net center-here-xyz          halui.mdi-command-06    <= pyvcp.center-here-xyz
+ net set_z                    halui.mdi-command-07    <= pyvcp.set_z
  net probe                    parport.0.pin-11-in-not <= pyvcp.probe
 
 # set up spindle speed control

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+zenity --warning --text "Rimuovi Z probe"
+exit 0

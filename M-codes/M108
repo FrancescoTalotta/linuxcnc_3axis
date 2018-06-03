@@ -1,0 +1,4 @@
+#!/bin/bash
+
+zenity --warning --text "Inserisci Z probe"
+exit 0
