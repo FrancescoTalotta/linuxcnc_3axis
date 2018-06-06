@@ -1,4 +1,4 @@
 #!/bin/bash
-
-zenity --warning --text "HAI ACCESO IL MANDRINO?"
+(sleep 1 && wmctrl -F -a "Attenzione" -b add,above) &
+zenity --title="Attenzione" --warning --text "HAI ACCESO IL MANDRINO?"
 exit 0

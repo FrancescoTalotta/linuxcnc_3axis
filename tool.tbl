@@ -34,8 +34,8 @@ T33 P33 D8.000000 ;round-carve wood 8.0mm
 T34 P34 D10.000000 Z-13.632800 ;round-carve wood 10.0mm 
 T35 P35 D9.900000 Z-13.632800 ;round-wood 10.0mm 
 T36 P36 D9.700000 Z-16.349400 ;flat-wood 10.0mm 
-T37 P37 D22.000000 Z-13.189547 ;v-carve-wood 60° 
-T38 P38 D32.000000 Z-5.988585 ;v-carve-wood 90° 
+T37 P37 D22.000000 Z-30.018044 ;v-carve-wood 60° 
+T38 P38 D32.000000 Z-20.764157 ;v-carve-wood 90° 
 T39 P39 D0.800000 Z-13.632800 ;flat 0.8 mm 
 T40 P40 D3.000000 Z-8.981238 ;one flute flat 3.0 mm 
 T41 P41 D2.000000 Z-11.863963 ;one flute flat 2.0 mm 
@@ -50,6 +50,6 @@ T49 P49 D0.800000 Z-13.632800 ;pcb holes 0.8mm
 T50 P50 D8.000000 Z-13.632800 ;flat-wood 8.0mm 
 T51 P51 D0.500000 Z-20.517568 ;flat engraving 0.5mm 
 T52 P52 D0.400000 Z-10.788995 ;flat engraving 0.4mm 
-T53 P53 D3.000000 Z-12.837062 ;flat engraving 0.4mm 
+T53 P53 D3.000000 Z-12.837062 ;flat wood 3.0mm 
 T54 P54 D3.000000 ;one flute 3.0mm special ALU
 T55 P55 D3.000000 ;one flute 3.0mm EVO

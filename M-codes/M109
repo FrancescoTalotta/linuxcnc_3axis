@@ -1,4 +1,5 @@
 #!/bin/bash
 
-zenity --warning --text "Rimuovi Z probe"
+(sleep 1 && wmctrl -F -a "Attenzione" -b add,above) &
+zenity --warning --title="Attenzione" --text "Rimuovi Z probe"
 exit 0
