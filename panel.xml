@@ -98,7 +98,7 @@
 
  </hbox>
 
- <hbox>
+<!-- <hbox>
    <relief>GROOVE</relief>
    <bd>4</bd>
    <label>
@@ -110,5 +110,38 @@
      <font>("Helvetica",12)</font>
      <format>"3.1f"</format>
    </number>
-  </hbox>
+  </hbox>-->
+
+
+<hbox>
+   <relief>GROOVE</relief>
+   <bd>2</bd>
+   <label>
+     <text>"Durata Taglio:"</text>
+     <font>("Helvetica",14)</font>
+   </label>
+   <u32>
+     <halpin>"time-hours"</halpin>
+     <font>("Helvetica",14)</font>
+     <format>"2d"</format>
+   </u32>
+   <label>
+     <text>":"</text>
+     <font>("Helvetica",14)</font>
+   </label>
+   <u32>
+     <halpin>"time-minutes"</halpin>
+     <font>("Helvetica",14)</font>
+     <format>"2d"</format>
+   </u32>
+   <label>
+     <text>":"</text>
+     <font>("Helvetica",14)</font>
+   </label>
+   <u32>
+     <halpin>"time-seconds"</halpin>
+     <font>("Helvetica",14)</font>
+     <format>"2d"</format>
+   </u32>
+</hbox> 
 </pyvcp>
