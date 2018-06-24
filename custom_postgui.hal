@@ -24,13 +24,15 @@
  #net water_temp arduino.temperature => pyvcp.temperature 
 
 # Timer 
+ loadrt time
+ loadrt not
+ addf time.0 servo-thread
+ addf  not.0 servo-thread
+ net prog-running    not.0.in           <= halui.program.is-idle
+ net cycle-timer     time.0.start       <= not.0.out
+ net cycle-seconds   pyvcp.time-seconds <= time.0.seconds
+ net cycle-minutes   pyvcp.time-minutes <= time.0.minutes
+ net cycle-hours     pyvcp.time-hours   <= time.0.hours
 
-loadrt time
-loadrt not
-addf time.0 servo-thread
-addf  not.0 servo-thread
-net prog-running    not.0.in           <= halui.program.is-idle
-net cycle-timer     time.0.start       <= not.0.out
-net cycle-seconds   pyvcp.time-seconds <= time.0.seconds
-net cycle-minutes   pyvcp.time-minutes <= time.0.minutes
-net cycle-hours     pyvcp.time-hours   <= time.0.hours
+#Time estimantion 
+ net time-minutes-sim pyvcp.time-minutes-sim <= axisui.cut_time
