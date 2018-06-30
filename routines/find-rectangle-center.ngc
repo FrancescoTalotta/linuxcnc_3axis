@@ -7,9 +7,9 @@ M5 (tunr off the spindle)
 G21 (mm is machine unit)
 
 (Rough Estimation of Size)
-#<_x_lenght> = 390.000
-#<_y_lenght> = 250.000
-#<_z_height> = 15.000
+#<_x_lenght> = 166.000
+#<_y_lenght> = 159.000
+#<_z_height> = 6.000
 #<_angle>    = 3.000 (degrees)
 
 (Go to the G54 origin)

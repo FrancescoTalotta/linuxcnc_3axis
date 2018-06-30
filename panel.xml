@@ -145,6 +145,7 @@
    </u32>
 </hbox> 
 
+
 <hbox>
    <relief>GROOVE</relief>
    <bd>2</bd>
@@ -161,5 +162,21 @@
      <text>"min"</text>
      <font>("Helvetica",14)</font>
    </label>
+</hbox>
+
+<hbox>
+   <relief>GROOVE</relief>
+   <bd>2</bd>
+   <label>
+     <text>"Primo utensile:"</text>
+     <font>("Helvetica",14)</font>
+     <fg>"#162589"</fg>
+   </label>
+   <u32>
+     <halpin>"first-tool"</halpin>
+     <font>("Helvetica",14,"bold")</font>
+     <fg>"#630a3b"</fg>
+     <format>"2d"</format>
+   </u32>
 </hbox>
 </pyvcp>

@@ -44,6 +44,8 @@ def main():
                 with open('/home/ciccio/linuxcnc/configs/3040t_no-endstops/routines/set_z.ngc', 'w') as z_tool_routine:
                      z_tool_routine.writelines(line_vector)
                 z_tool_routine.close()
+                tool_to_load = str("halcmd setp pyvcp.first-tool %d" % tool)
+                os.system(tool_to_load)
 
             set_z=True
         else:

@@ -1,0 +1,4 @@
+O <call-find-rectangle-center> sub
+ M105
+ O <find-rectangle-center> CALL 
+O <call-find-rectangle-center> endsub

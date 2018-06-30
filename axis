@@ -1727,7 +1727,7 @@ def calc_cut_time(event=None):
     sum(dist(l[1][:3], l[2][:3])/mf  for l in o.canon.traverse) +
     o.canon.dwell_time
     )  
-    comp['cut_time'] = int(gt/60)
+    comp['cut_time'] = int(gt*1.3/60)
 
 def reload_file(refilter=True):
     if running(): return
