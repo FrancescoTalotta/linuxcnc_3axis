@@ -7,9 +7,9 @@ M5 (tunr off the spindle)
 G21 (mm is machine unit)
 
 (Rough Estimation of Size)
-#<_x_lenght> = 166.000
-#<_y_lenght> = 159.000
-#<_z_height> = 6.000
+#<_x_lenght> = 50.0
+#<_y_lenght> = 51.5
+#<_z_lenght> = 40.22
 #<_angle>    = 3.000 (degrees)
 
 (Go to the G54 origin)
@@ -19,7 +19,7 @@ G0 Z[#<_z_height>+4]
 (Go to the Center and Probe Z)
 G0 Z[#<_z_height>+4]
 G0 X[#<_x_lenght>/2] Y[#<_y_lenght>/2]
-G38.2 Z[-#<_z_height>-30] F140.0
+G38.2 Z[-#<_z_height>-30] F120.0
 G10 L20 P1 Z0
 G0 Z5.0
 
@@ -27,7 +27,7 @@ G0 Z5.0
 G0 X[#<_x_lenght>/2] Y-10.0
 G0 Z-1.5
 
-G38.2 Y10.0 F150.0
+G38.2 Y10.0 F120.0
 #<point1> = #5062
 G0 Y-5
 G0 Z5.0
@@ -36,7 +36,7 @@ G0 Z5.0
 G0 X[#<_x_lenght>/2] Y[#<_y_lenght>+10]
 G0 Z-1.5
 
-G38.2 Y[#<_y_lenght>-10.0] F150.0
+G38.2 Y[#<_y_lenght>-10.0] F120.0
 #<point2> = #5062
 G0 Y[#<_y_lenght>+5]
 G0 Z5.0
@@ -50,7 +50,7 @@ G10 L20 P1 Y0
 G0 X[#<_x_lenght>+10] Y0
 G0 Z-1.5
 
-G38.2 X[#<_x_lenght>-10] F150.0
+G38.2 X[#<_x_lenght>-10] F120.0
 #<point3> = #5061
 G0 Z5.0
 
@@ -58,7 +58,7 @@ G0 Z5.0
 G0 X-10.0 Y0
 G0 Z-1.5
 
-G38.2 X10.0 F150.0
+G38.2 X10.0 F120.0
 #<point4> = #5061
 G0 X-5.0
 G0 Z5.0

@@ -1,22 +1,23 @@
 #!/bin/bash
 #This routine set dimensions for the find-rectangle-center.ngc routine
 
-yad_data=$(yad --title "Inserisci dati"  --text="Inserisci dimensioni (in mm)" --form --field "Lunghezza X" --field="Lunghezza Y" --field="Lunghezza Z")
+(sleep 1 && wmctrl -F -a "Inserisci dati" -b add,above) &
+yad_data=$(yad --title "Inserisci dati"  --text="Inserisci dimensioni del rettangolo (in mm)" --form --field "Lunghezza X" --field="Lunghezza Y" --field="Altezza Z")
 
 x=$(echo $yad_data | awk 'BEGIN {FS="|" } { print $1 }')
 y=$(echo $yad_data | awk 'BEGIN {FS="|" } { print $2 }')
 z=$(echo $yad_data | awk 'BEGIN {FS="|" } { print $3 }')
 
 if [ ! -z "$x" ]; then
- sed -i "10s/.*/ #<_x_lenght> = $x/" /home/ciccio/linuxcnc/configs/3040t_no-endstops/routines/find-rectangle-center.ngc
+ sed -i "10s/.*/#<_x_lenght> = $x/" /home/ciccio/linuxcnc/configs/3040t_no-endstops/routines/find-rectangle-center.ngc
 fi
 
 if [ ! -z "$y" ]; then
- sed -i "11s/.*/ #<_y_lenght> = $y/" /home/ciccio/linuxcnc/configs/3040t_no-endstops/routines/find-rectangle-center.ngc
+ sed -i "11s/.*/#<_y_lenght> = $y/" /home/ciccio/linuxcnc/configs/3040t_no-endstops/routines/find-rectangle-center.ngc
 fi
 
 if [ ! -z "$z" ]; then
- sed -i "12s/.*/ #<_z_lenght> = $z/" /home/ciccio/linuxcnc/configs/3040t_no-endstops/routines/find-rectangle-center.ngc
+ sed -i "12s/.*/#<_z_lenght> = $z/" /home/ciccio/linuxcnc/configs/3040t_no-endstops/routines/find-rectangle-center.ngc
 fi
 
 exit 0
