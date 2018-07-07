@@ -76,27 +76,34 @@
      <fg>"#000000"</fg>
  </button>
 
- <hbox>
-     <relief>GROOVE</relief>
-     <bd>2</bd>
-     <label>
-         <text>"PROBE"</text>
-         <font>('Helvetica',13)</font>
-     </label>
-     <led>
-        <halpin>"probe"</halpin>
-        <size>23</size>
-        <on_color>"green"</on_color>
-        <off_color>"red"</off_color>
-      </led>
+<vbox>
+ <label><pady>2</pady></label>
+</vbox>
 
-      <checkbutton>
-         <halpin>"probe_3d"</halpin>
-         <text>"Probe 3D"</text>
-         <font>("Helvetica",10)</font>
-      </checkbutton>
+<hbox>
+    <relief>GROOVE</relief>
+    <bd>2</bd>
+    <label>
+        <text>"PROBE"</text>
+        <font>('Helvetica',13)</font>
+    </label>
+    <led>
+       <halpin>"probe"</halpin>
+       <size>23</size>
+       <on_color>"green"</on_color>
+       <off_color>"red"</off_color>
+     </led>
 
- </hbox>
+     <checkbutton>
+        <halpin>"probe_3d"</halpin>
+        <text>"Probe 3D"</text>
+        <font>("Helvetica",10)</font>
+     </checkbutton>
+</hbox>
+
+<vbox>
+ <label><pady>2</pady></label>
+</vbox>
 
 <!-- <hbox>
    <relief>GROOVE</relief>
@@ -111,7 +118,6 @@
      <format>"3.1f"</format>
    </number>
   </hbox>-->
-
 
 <hbox>
    <relief>GROOVE</relief>
@@ -179,4 +185,129 @@
      <format>"2d"</format>
    </u32>
 </hbox>
+
+ <vbox>
+  <label><pady>2</pady></label>
+ </vbox>
+
+<vbox>
+  <relief>RIDGE</relief>
+  <bd>4</bd>
+  <label>
+    <text>"Regolazione asse Z"</text>
+    <font>"bold"</font>
+  </label>
+  <vbox>
+    <relief>"sunken"</relief>
+    <bd>3</bd>
+    <hbox>
+      <label>
+        <padx>0</padx>
+        <font>"monospace"</font>
+      </label>
+        <led>
+        <halpin>"enable"</halpin>
+         <size>15</size>
+         <on_color>"springgreen"</on_color>
+         <off_color>"#d9d9d9"</off_color>
+       </led>
+       <label>
+         <text>" Regolazione Abilitata"</text>
+         <anchor>"w"</anchor>
+       </label>
+    </hbox>
+
+    <hbox>
+      <label>
+        <padx>0</padx>
+        <font>"monospace"</font>
+      </label>
+      <led>
+        <halpin>"limited"</halpin>
+          <size>15</size>
+          <on_color>"red"</on_color>
+          <off_color>"#d9d9d9"</off_color>
+      </led>
+      <label>
+        <text>" Limite"</text>
+        <anchor>"w"</anchor>
+      </label>
+    </hbox>
+
+    <hbox>
+      <label>
+        <padx>0</padx>
+        <font>"monospace"</font>
+      </label>
+        <led>
+        <halpin>"eoffset-active"</halpin>
+         <size>15</size>
+         <on_color>"gold"</on_color>
+         <off_color>"#d9d9d9"</off_color>
+       </led>
+       <label>
+         <text>" Regolazione attiva"</text>
+         <anchor>"w"</anchor>
+       </label>
+    </hbox>
+    <hbox>
+      <number>
+        <halpin>"z-offset-f"</halpin>
+        <format>"+8.2f"</format>
+        <width>"13"</width>
+        <bg>"black"</bg>
+        <fg>"gold"</fg>
+        <font>"bold"</font>
+      </number>
+      <label> 
+        <text>"mm"</text>
+        <font>"bold"</font>
+      </label>
+    </hbox>
+    <hbox>
+      <label>
+        <anchor>"w"</anchor>
+        <text>"Scala:"</text>
+        <font>"bold"</font>
+      </label>
+      <spinbox>
+        <halpin>"z-scale"</halpin>
+        <min_>0.05</min_>
+        <max_>1.00</max_>
+        <width>6</width>
+        <initval>0.05</initval>
+        <resolution>0.05</resolution>
+        <format>"8.2f"</format>
+        <font>"bold"</font>
+        <param_pin>1</param_pin>
+      </spinbox>
+      <label>
+        <text>"mm"</text>
+        <font>"bold"</font>
+      </label>
+    </hbox>
+    <button>
+      <halpin>"z-plus"</halpin>
+      <text>"↑ Alza Z"</text>
+      <bd>4</bd>
+      <font>"bold",10</font>
+    </button>
+    <button>
+      <halpin>"z-minus"</halpin>
+      <bd>4</bd>
+      <width>1</width>
+      <text>"↓ Abbassa Z"</text>
+      <font>"bold",10</font>
+      <bg>"#ff75b5"</bg>
+      <fg>"#000000"</fg>
+    </button>
+    <button>
+      <halpin>"clearall"</halpin>
+      <bd>3</bd>
+      <width>1</width>
+      <text>"Resetta"</text>
+      <font>"bold",10</font>
+    </button>
+  </vbox>
+</vbox>
 </pyvcp>
