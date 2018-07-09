@@ -37,6 +37,9 @@
 #Time estimantion 
  net time-minutes-sim pyvcp.time-minutes-sim <= axisui.cut_time
 
+#Gcode percent
+ net gcode_percent cpins.gcode_percent  => pyvcp.gcode_percent
+
 #Z offset
  loadrt updown names=zctr
  addf   zctr   servo-thread

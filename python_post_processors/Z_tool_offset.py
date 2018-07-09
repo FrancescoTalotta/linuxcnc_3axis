@@ -23,13 +23,15 @@ def progress(a, b):
 
 def main():
     global feedrate, feedrat
-    feedrate  = 0
-    feedrate2 = 0
-    is_on     = True
-    set_z     = False
+    feedrate        = 0
+    feedrate2       = 0
+    tot_line_number = 0
+    is_on           = True
+    set_z           = False
     infile = sys.argv[1]
     f = open(infile, "r")
     for line in f:
+        tot_line_number += 1
         match = re.match("T(\d{1,2})(.*)M(\d.*)", line)
         if match:
             tool = int(match.group(1))
@@ -80,6 +82,9 @@ def main():
         match = re.match("M5(.*)", line)
         if match:
             is_on= True
+
+    tot_line_print = str("halcmd setp cpins.gcode_line_numbers %d" % tot_line_number)
+    os.system(tot_line_print)
 
 if __name__ == '__main__':
     main()

@@ -151,7 +151,6 @@
    </u32>
 </hbox> 
 
-
 <hbox>
    <relief>GROOVE</relief>
    <bd>2</bd>
@@ -169,6 +168,28 @@
      <font>("Helvetica",14)</font>
    </label>
 </hbox>
+
+<hbox>
+   <relief>GROOVE</relief>
+   <bd>2</bd>
+   <label>
+     <text>"Gcode progress:"</text>
+     <font>("Helvetica",14)</font>
+   </label>
+   <u32>
+     <halpin>"gcode_percent"</halpin>
+     <font>("Helvetica",14,"bold")</font>
+     <format>"2d"</format>
+   </u32>
+   <label>
+     <text>"%"</text>
+     <font>("Helvetica",14)</font>
+   </label>
+</hbox>
+
+<vbox>
+ <label><pady>2</pady></label>
+</vbox>
 
 <hbox>
    <relief>GROOVE</relief>

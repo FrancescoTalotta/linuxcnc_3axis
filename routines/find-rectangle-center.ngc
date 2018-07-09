@@ -29,6 +29,11 @@ G0 Z-1.5
 
 G38.2 Y10.0 F120.0
 #<point1> = #5062
+
+G0 Y[#<point1>-2]
+G38.2 Y10.0 F60.0
+#<point1> = #5062
+
 G0 Y-5
 G0 Z5.0
 
@@ -38,6 +43,11 @@ G0 Z-1.5
 
 G38.2 Y[#<_y_lenght>-10.0] F120.0
 #<point2> = #5062
+
+G0 Y[#<point2>+2]
+G38.2 Y[#<_y_lenght>-10.0] F60.0
+#<point2> = #5062
+
 G0 Y[#<_y_lenght>+5]
 G0 Z5.0
 
@@ -52,6 +62,12 @@ G0 Z-1.5
 
 G38.2 X[#<_x_lenght>-10] F120.0
 #<point3> = #5061
+
+G0 X[#<point3>+2]
+G38.2 X[#<_x_lenght>-10] F60.0
+#<point3> = #5061
+
+G0 X[#<_x_lenght>+5]
 G0 Z5.0
 
 (-->Probe point 4)
@@ -60,13 +76,20 @@ G0 Z-1.5
 
 G38.2 X10.0 F120.0
 #<point4> = #5061
+
+G0 X[#<point4>-2]
+G38.2 X10.0 F60.0
+#<point4> = #5061
+
 G0 X-5.0
 G0 Z5.0
 
 (-->Set the X center)
 #<x_center> = [#<point4>+[#<point3>-#<point4>]/2]
-G0 X[#<x_center>] 
 G10 L20 P1 X0
+
+(-->Go to the center of the piece)
+G0 X0 Y0
 
 O <find-rectangle-center> endsub
 
