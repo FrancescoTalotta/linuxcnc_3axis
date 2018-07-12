@@ -37,7 +37,7 @@ T36 P36 D9.700000 Z-16.349400 ;flat-wood 10.0mm
 T37 P37 D22.000000 Z-13.189547 ;v-carve-wood 60° 
 T38 P38 D32.000000 Z-5.988585 ;v-carve-wood 90° 
 T39 P39 D0.800000 Z-13.632800 ;flat 0.8 mm 
-T40 P40 D3.000000 Z-8.981238 ;one flute flat 3.0 mm 
+T40 P40 D3.000000 Z-20.512399 ;one flute flat 3.0 mm 
 T41 P41 D2.000000 Z-11.863963 ;one flute flat 2.0 mm 
 T42 P42 D1.000000 Z-13.632800 ;alloy round 1.0 mm 
 T43 P43 D2.000000 Z-13.632800 ;alloy round 2.0 mm 
@@ -57,7 +57,7 @@ T56 P56 D3.000000 ;end mill PCB 25°
 T57 P57 D3.000000 ;flat engraving 0.6mm
 T58 P58 D15.000000 ;marble v-carve 60°
 T59 P59 D20.000000 ;marble v-carve 60°
-T60 P60 D20.000000 ;marble v-carve 90°
+T60 P60 D20.000000 Z-26.546853 ;marble v-carve 90°
 T61 P61 D3.000000 ;marble v-carve 20°
 T62 P62 D3.000000 ;marble v-carve 20°
 T63 P63 D4.000000 ;marble v-carve 20°

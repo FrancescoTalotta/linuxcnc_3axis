@@ -88,7 +88,7 @@ G0 Z5.0
 #<x_center> = [#<point4>+[#<point3>-#<point4>]/2]
 G10 L20 P1 X0
 
-(-->Go to the center of the piece)
+(-->Go to the center)
 G0 X0 Y0
 
 O <find-rectangle-center> endsub
