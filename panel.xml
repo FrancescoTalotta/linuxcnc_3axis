@@ -61,8 +61,8 @@
  </button>
 
  <button>
-     <halpin>"find-center"</halpin>
-     <text>"Find Center"</text>
+     <halpin>"find-circle-center"</halpin>
+     <text>"Find Circle Center"</text>
      <font>('Fixed',9)</font>
      <bg>"#c8ebf7"</bg>
      <fg>"#000000"</fg>

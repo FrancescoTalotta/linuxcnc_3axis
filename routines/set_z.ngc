@@ -3,11 +3,11 @@ O <set_z> sub
   G49
   G54
   #<probe_height> = 19.32
-  G0 Z40
+  G0 Z25
   M108
   G38.2 Z-15 F140
-  G10 L10 P52 Z[#<probe_height>]
-  G0 Z40
+  G10 L10 P30 Z[#<probe_height>]
+  G0 Z25
   G43
   M109
 O <set_z> endsub

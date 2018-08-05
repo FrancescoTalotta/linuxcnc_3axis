@@ -1,0 +1,47 @@
+(Determine the circle center starting from a G54 position)
+
+O <find-circle-center> sub
+
+M5 (tunr off the spindle)
+G21 (mm is machine unit)
+
+(Rough Estimation of Diameter)
+#<_diameter> = 24
+
+(Go to the G54 origin)
+G54
+
+(Probe point 1)
+G38.2 Y[-#<_diameter>] F150.0
+#<y1> = #5062
+G0 Y0
+
+(Probe point 2)
+G38.2 Y[#<_diameter>] F150.0
+#<y2> = #5062
+G0 Y0
+
+(Set Y center)
+#<y_center> = [#<y1>+[#<y2>-#<y1>]/2]
+G0 Y[#<y_center>]
+G10 L20 P1 Y0
+
+(Probe point 3)
+G38.2 X[-#<_diameter>] F150.0
+#<x1> = #5061
+G0 X0
+
+(Probe point 4)
+G38.2 X[#<_diameter>] F150.0
+#<x2> = #5061
+G0 X0
+
+(Set X center)
+#<x_center> = [#<x1>+[#<x2>-#<x1>]/2]
+G0 X[#<x_center>]
+G10 L20 P1 X0
+
+
+O <find-circle-center> endsub
+
+M2

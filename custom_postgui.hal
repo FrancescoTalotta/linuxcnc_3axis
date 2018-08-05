@@ -6,7 +6,7 @@
  net remote-rapid-to-home-xy  halui.mdi-command-01    <= pyvcp.rapid-to-home-xy
  net remote-go-away-xyz       halui.mdi-command-02    <= pyvcp.go-away-xyz
  net remote-recenter          halui.mdi-command-03    <= pyvcp.recenter
- net remote-find-center       halui.mdi-command-04    <= pyvcp.find-center
+ net remote-circle-center     halui.mdi-command-04    <= pyvcp.find-circle-center
  net remote-rect-center       halui.mdi-command-05    <= pyvcp.find-rectangle-center
  net center-here-xyz          halui.mdi-command-06    <= pyvcp.center-here-xyz
  net set_z                    halui.mdi-command-07    <= pyvcp.set_z

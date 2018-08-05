@@ -1,0 +1,13 @@
+#!/bin/bash
+#This routine set dimensions for the find-circle-center.ngc routine
+
+(sleep 1 && wmctrl -F -a "Inserisci dati" -b add,above) &
+yad_data=$(yad --title "Inserisci dati"  --text="Inserisci diametro foro (mm)" --form --field "Diametro")
+
+diam=$(echo $yad_data | awk 'BEGIN {FS="|" } { print $1 }')
+
+if [ ! -z "$diam" ]; then
+ sed -i "9s/.*/#<_diameter> = $diam/" /home/ciccio/linuxcnc/configs/10060_3axis/routines/find-circle-center.ngc
+fi
+
+exit 0
