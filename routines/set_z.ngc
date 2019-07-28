@@ -6,7 +6,7 @@ O <set_z> sub
   G0 Z25
   M108
   G38.2 Z-15 F140
-  G10 L10 P30 Z[#<probe_height>]
+  G10 L10 P38 Z[#<probe_height>]
   G0 Z25
   G43
   M109
